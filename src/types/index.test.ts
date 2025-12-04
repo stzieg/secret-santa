@@ -33,6 +33,7 @@ describe('Type definitions', () => {
       participants: [],
       constraints: [],
       assignments: [],
+      currentView: 'main',
     };
     expect(state.participants).toEqual([]);
   });

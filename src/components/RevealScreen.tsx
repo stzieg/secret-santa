@@ -17,7 +17,7 @@ interface RevealScreenProps {
 
 type Phase = 'countdown' | 'showing' | 'complete';
 
-export function RevealScreen({ assignments, participants, onComplete, onExit }: RevealScreenProps) {
+export function RevealScreen({ assignments, participants, onExit }: RevealScreenProps) {
   // Randomize the order of assignments once when component mounts
   const shuffledAssignments = useMemo(() => {
     const shuffled = [...assignments];

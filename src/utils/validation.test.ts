@@ -212,7 +212,7 @@ describe('validateConstraint', () => {
         ),
         // Generate a non-empty list of existing constraints
         fc.nat(),
-        (generatedParticipants, seed) => {
+        (generatedParticipants, _seed) => {
           // Ensure we have at least 2 participants
           if (generatedParticipants.length < 2) return;
 
