@@ -35,8 +35,13 @@ export function RevealScreen({ assignments, participants, onExit }: RevealScreen
 
   // Play background music when component mounts
   useEffect(() => {
-    // Create audio element for background music using configured file
-    const audioPath = `/media/${REVEAL_SCREEN_MEDIA.audio.filename}`;
+    // Randomly select one of the available songs
+    const audioFilenames = REVEAL_SCREEN_MEDIA.audio.filenames;
+    const randomIndex = Math.floor(Math.random() * audioFilenames.length);
+    const selectedSong = audioFilenames[randomIndex];
+    
+    // Create audio element for background music using randomly selected file
+    const audioPath = `/media/${selectedSong}`;
     const audio = new Audio(audioPath);
     audio.loop = REVEAL_SCREEN_MEDIA.audio.loop;
     audio.volume = REVEAL_SCREEN_MEDIA.audio.volume;

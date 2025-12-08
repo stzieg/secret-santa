@@ -4,11 +4,12 @@ This directory contains the media files used in the Secret Santa reveal screen.
 
 ## How to Add Your Own Files
 
-### 1. Add Your Audio File
-- Place your Christmas song or background music in this directory
+### 1. Add Your Audio Files
+- Place your Christmas songs or background music in this directory
 - Supported formats: `.mp3`, `.wav`, `.ogg`
 - Recommended: Use MP3 format for best browser compatibility
-- Example: `christmas-song.mp3`
+- You can add multiple songs - one will be randomly selected each time!
+- Examples: `christmas-song.mp3`, `christmas-song-2.mp3`
 
 ### 2. Add Your GIF/Image File
 - Place your festive animation or background image in this directory
@@ -18,18 +19,19 @@ This directory contains the media files used in the Secret Santa reveal screen.
 
 ### 3. Update the Configuration
 - Open `src/config/revealScreenMedia.ts`
-- Update the `filename` values to match your file names:
+- Update the `filenames` array to match your audio files:
   ```typescript
   audio: {
-    filename: 'your-song-name.mp3',  // Change this
+    filenames: ['song-1.mp3', 'song-2.mp3'],  // Add all your songs here
     volume: 0.3,
     loop: true,
   },
   background: {
     filename: 'your-animation.gif',  // Change this
-    opacity: 0.3,
+    opacity: 0.7,
   }
   ```
+- The app will randomly pick one song each time the reveal screen loads!
 
 ### 4. Optional: Adjust Settings
 You can also customize:

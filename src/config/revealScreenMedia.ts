@@ -2,7 +2,7 @@
  * Reveal Screen Media Configuration
  * 
  * Place your custom media files in the /public/media directory:
- * - Audio file: /public/media/your-song.mp3
+ * - Audio files: /public/media/your-song.mp3
  * - GIF file: /public/media/your-animation.gif
  * 
  * Then update the filenames below to use your custom files.
@@ -11,9 +11,10 @@
 export const REVEAL_SCREEN_MEDIA = {
   // Background music configuration
   audio: {
-    // Set the filename of your audio file (must be in /public/media/)
+    // Array of audio filenames (must be in /public/media/)
+    // One will be randomly selected each time the reveal screen loads
     // Supported formats: .mp3, .wav, .ogg
-    filename: 'christmas-song.mp3',
+    filenames: ['christmas-song.mp3', 'christmas-song-2.mp3'],
     
     // Volume level (0.0 to 1.0)
     volume: 0.3,
