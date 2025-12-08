@@ -14,7 +14,12 @@ export const REVEAL_SCREEN_MEDIA = {
     // Array of audio filenames (must be in /public/media/)
     // One will be randomly selected each time the reveal screen loads
     // Supported formats: .mp3, .wav, .ogg
-    filenames: ['christmas-song.mp3', 'christmas-song-2.mp3'],
+    filenames: [
+      'christmas-song.mp3',
+      'christmas-song-2.mp3',
+      'christmas-song-3.mp3',
+      'christmas-song-4.mp3'
+    ],
     
     // Volume level (0.0 to 1.0)
     volume: 0.3,
